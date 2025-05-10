@@ -11,9 +11,9 @@
 
 int Display(int iNo, int iFrequency)
 {
-    for(int iFrequency = 0; iNo < iFrequency; iNo++);
+    for(int i = 0; i < iFrequency; i++);
     {
-        printf("%d\n",iFrequency);
+        printf("%d\n",iNo);
     }
 }
 
