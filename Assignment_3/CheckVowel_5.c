@@ -8,12 +8,12 @@
 ///////////////////////////////////////////////////////
 
 #include<stdio.h>
+#include<stdbool.h>
 
 #define TRUE 1
 #define FALSE 0
-typedef int BOOL;
 
-BOOL ChkVowel (char ch )
+bool ChkVowel (char ch )
 {
     if ((ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ||ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'))
     {
@@ -28,7 +28,7 @@ BOOL ChkVowel (char ch )
 int main()
 {
     char cValue = '\0';
-    BOOL bRet = FALSE;
+    bool bRet = FALSE;
 
     printf("Enter Character : ");
     scanf("%c", &cValue);
