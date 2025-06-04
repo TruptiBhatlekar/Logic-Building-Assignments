@@ -21,12 +21,14 @@ void Pattern(int iRow, int iCol)
 
   for (i = 1; i <= iRow; i++)
   {
-
     if (i % 2 != 0)
-      iStart = 2;
+    {
+     iStart = 2;
+    }
     else
+    {
       iStart = 1;
-
+    }
     for (j = 1; j <= iCol; j++)
     {
       printf("%d\t", iStart);
