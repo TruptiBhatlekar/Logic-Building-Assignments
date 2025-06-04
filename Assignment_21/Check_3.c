@@ -21,9 +21,13 @@ int Difference (int Arr[], int iLength, int iValue)
     for (int i = 1; i < iLength; i++)
     {
         if (Arr[i] < iMin)
+        {
             iMin = Arr[i];
+        }
         if (Arr[i] > iMax)
+        {
             iMax = Arr[i];
+        }
     }
     return (iMax - iMin);
 }
