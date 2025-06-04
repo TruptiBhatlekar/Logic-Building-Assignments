@@ -19,15 +19,17 @@
 void Display(char ch)
 {
   if ((ch >= 'a') && (ch <= 'z'))
-
+  {
     printf("%c\n", ch - ('a' - 'A'));
-
+  }
   else if ((ch >= 'A') && (ch <= 'Z'))
-
+  {
     printf("%c\n", ch + ('a' - 'A'));
-
+  }
   else
+  {
     printf("%c\n", ch);
+  }
 }
 
 int main()
