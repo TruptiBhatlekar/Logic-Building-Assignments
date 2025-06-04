@@ -24,12 +24,13 @@ void Pattern(int iRow, int iCol)
     for (j = 1; j <= iCol; j++)
     {
       if (j >= i)
-
+      {
         printf("%d\t", j);
-
+      }
       else
-
+      {
         printf(" \t");
+      }
     }
     printf("\n");
   }
