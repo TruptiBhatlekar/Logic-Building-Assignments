@@ -1,24 +1,24 @@
-#Assignment 24
-------------------------------------------------------
+#Assignment 29
+-------------------------------------------------------------------
 1. 
 Title: 	      CountCapital_1
-Description:  Accept String from user and count number of capital characters. 
-------------------------------------------------------
+Description:  Accept file name from user and count capital characters from file. 
+--------------------------------------------------------------------------
 2. 
 Title: 	      CountSmall_2
-Description:  Accept String from user and count number of small characters.
---------------------------------------------------------
+Description:  Accept file name from user and count small characters from file.
+--------------------------------------------------------------------
 3. 
-Title: 	      Difference_3
-Description:  Accept String from user and return difference between frequency of small and capital characters. 
---------------------------------------------------------
+Title: 	      CountSpaces_3
+Description:  Accept File name from user and count white spaces from file.
+-------------------------------------------------------------------
 4. 
-Title: 	      ChkVowel_4
-Description:  Accept String from user and check whether it contains vowels in it or not.
-----------------------------------------------------------
+Title: 	      CountChar_4
+Description:  Accept file name and one character from user and counts number of occurrences of that character from that file.
+-------------------------------------------------------------------
 5. 
-Title: 	      Reverse_5
-Description:  Accept String from user and display it in reverse order.
+Title: 	      DisplayN_5
+Description:  Accept file name and one count from user and reads that number of characters from starting position. 
 -------------------------------------------------------------
 
 Above all problem statements are solved in C Programming using Visual Studio Code as IDE and command Prompt is used for execute commands.
