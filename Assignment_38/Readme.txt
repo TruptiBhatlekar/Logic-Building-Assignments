@@ -21,6 +21,6 @@ Title: 	      GenericTemp_5
 Description:  Generic program to return the smallest value from N elements.
 ----------------------------------------------------------------------------------
 
-Above all problem statements are solved in C Programming using Visual Studio Code as IDE and command Prompt is used for execute commands.
+Above all problem statements are solved in C++ Programming using Visual Studio Code as IDE and command Prompt is used for execute commands.
 
 #Trupti Bhatlekar
