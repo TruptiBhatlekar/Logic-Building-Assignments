@@ -11,20 +11,23 @@
 // Output: * * * * * 
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
+#include <stdio.h>
 
 void Display()
 {
-    int i = 0;
-    for(i = 1; i <= 5; i++)
-    {
-        printf(" * ");
-    }
+  static int iCnt = 1;
+
+  if (iCnt <= 5)
+  {
+    printf("*\t");
+    iCnt++;
+    Display();
+  }
 }
 
 int main()
 {
-    Display();
+  Display();
 
-    return 0;
+  return 0;
 }
