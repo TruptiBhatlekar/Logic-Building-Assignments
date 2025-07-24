@@ -12,33 +12,28 @@
 // Output: 24
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
+#include <stdio.h>
 
 int Sum(int iNo)
 {
-    int iDigit = 0; int iSum = 0;
+  if (iNo == 0)
+  {
+    return 0;
+  }
 
-    while(iNo != 0)
-    {
-        iDigit = iNo % 10;
-        
-        iSum = iSum + iDigit;
-
-        iNo = iNo / 10;
-    }
-    return iSum;
+  return (iNo % 10) + Sum(iNo / 10);
 }
 
 int main()
 {
-    int iValue = 0; int iRet = 0;
+  int iValue = 0, iRet = 0;
 
-    printf("Enter Number: ");
-    scanf("%d",&iValue);
+  printf("Enter number: ");
+  scanf("%d", &iValue);
 
-    iRet = Sum(iValue);
+  iRet = Sum(iValue);
 
-    printf("%d", iRet);
+  printf("Summation is : %d\n", iRet);
 
-    return 0;
+  return 0;
 }
