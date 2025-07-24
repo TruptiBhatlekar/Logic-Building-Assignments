@@ -16,29 +16,24 @@
 
 int Fact(int iNo)
 {
-    int i = 0; int iFact = 1;
-    
-    if(iNo <= 0)
-    {
-        iNo = -iNo;
-    }
-    for (i = 1; i <= iNo; i++)
-    {
-        iFact = iFact * i;
-    }
-    return iFact;
+  if (iNo <= 1)
+  {
+    return 1;
+  }
+
+  return iNo * Fact(iNo - 1);
 }
 
 int main()
 {
-    int iValue = 0; int iRet = 0;
+  int iValue = 0, iRet = 0;
 
-    printf("Enter number: ");
-    scanf("%d", &iValue);
+  printf("Enter number: ");
+  scanf("%d", &iValue);
 
-    iRet = Fact(iValue);
+  iRet = Fact(iValue);
 
-    printf("%d", iRet);
+  printf("Factorial is : %d\n", iRet);
 
-    return 0;
+  return 0;
 }
