@@ -12,34 +12,29 @@
 // Output: 10 
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
+#include <stdio.h>
 
 int Strlen(char *str)
 {
-    int iCnt = 0;
+  if (*str == '\0')
+  {
+    return 0;
+  }
 
-    while(*str != 0)
-    {
-        if(((*str >= 'A') && (*str <= 'Z')) || ((*str >= 'a') && (*str <= 'z')))
-        {
-            iCnt++;
-        }
-        str++;
-    }
-    return iCnt;
+  return 1 + Strlen(str + 1);
 }
 
 int main()
 {
-    int iRet = 0;
-    char arr[20];
+  char arr[50];
+  int iRet = 0;
 
-    printf("Enter String: ");
-    scanf("%[^'\n']s",arr);
+  printf("Enter string: ");
+  scanf("%s", arr);
 
-    iRet = Strlen(arr);
+  iRet = Strlen(arr);
 
-    printf("%d", iRet);
+  printf("Length is : %d\n", iRet);
 
-    return 0;
+  return 0;
 }
