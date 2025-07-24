@@ -12,26 +12,28 @@
 // Output: 1 2 3 4 5
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
+#include <stdio.h>
 
 void Display(int iNo)
 {
-    int iCnt = 0;
+  static int iCnt = 1;
 
-    for(iCnt = 1; iCnt <= iNo; iCnt++)
-    {
-        printf(" %d ", iCnt);
-    }
+  if (iCnt <= iNo)
+  {
+    printf("%d\t", iCnt);
+    iCnt++;
+    Display(iNo);
+  }
 }
 
 int main()
 {
-    int iValue = 0;
+  int iValue = 0;
 
-    printf("Enter Number: ");
-    scanf("%d",&iValue);
+  printf("Enter number: ");
+  scanf("%d", &iValue);
 
-    Display(iValue);
+  Display(iValue);
 
-    return 0;
+  return 0;
 }
