@@ -11,21 +11,23 @@
 // Output: A B C D E F 
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
+#include <stdio.h>
 
 void Display()
 {
-    char ch = '\0';
-    
-    for(ch = 'A'; ch <= 'F'; ch++)
-    {
-        printf(" %c ", ch);
-    }
+  static char ch = 'A';
+
+  if (ch <= 'F')
+  {
+    printf("%c\t", ch);
+    ch++;
+    Display();
+  }
 }
 
 int main()
 {
-    Display();
+  Display();
 
-    return 0;
+  return 0;
 }
