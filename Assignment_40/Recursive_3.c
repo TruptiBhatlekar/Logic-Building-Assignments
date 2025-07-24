@@ -11,21 +11,23 @@
 // Output: 5 4 3 2 1 
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
+#include <stdio.h>
 
 void Display()
 {
-    int iCnt = 0;
-    
-    for(iCnt = 5; iCnt >= 1; iCnt--)
-    {
-        printf(" %d ", iCnt);
-    }
+  static int iCnt = 5;
+
+  if (iCnt >= 1)
+  {
+    printf("%d\t", iCnt);
+    iCnt--;
+    Display();
+  }
 }
 
 int main()
 {
-    Display();
+  Display();
 
-    return 0;
+  return 0;
 }
