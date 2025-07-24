@@ -16,26 +16,27 @@
 
 int Reverse(int iNo)
 {
-    int i = 0; 
+  static int iRev = 0;
 
-    while (iNo != 0)
-    {
-        i = (i * 10) + (iNo % 10);
-        iNo = iNo / 10;
-    }
-    return i;
+  if (iNo != 0)
+  {
+    iRev = (iRev * 10) + (iNo % 10);
+    Reverse(iNo / 10);
+  }
+
+  return iRev;
 }
 
 int main()
 {
-    int iValue = 0; int iRet = 0;
+  int iValue = 0;
+  int iRet = 0;
 
-    printf("Enter number: ");
-    scanf("%d", &iValue);
+  printf("Enter number: ");
+  scanf("%d", &iValue);
 
-    iRet = Reverse(iValue);
+  int iRet = Reverse(iValue);
+  printf("Reverse number is : %d\n", iRet);
 
-    printf("%d", iRet);
-
-    return 0;
+  return 0;
 }
