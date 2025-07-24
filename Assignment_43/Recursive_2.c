@@ -12,35 +12,34 @@
 // Output: 8
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
-
 int Max(int iNo)
 {
-    int iDigit = 0; int iMax = 0;
+  static int iMax = 0;
+  int iDigit = 0;
 
-    while(iNo != 0)
+  if (iNo != 0)
+  {
+    iDigit = iNo % 10;
+    if (iDigit > iMax)
     {
-        iDigit = iNo % 10;
-        
-        if(iDigit > iMax)
-        {
-            iMax = iDigit;
-        }
-        iNo = iNo / 10;
+      iMax = iDigit;
     }
-    return iMax;
+    Max(iNo / 10);
+  }
+
+  return iMax;
 }
 
 int main()
 {
-    int iValue = 0; int iRet = 0;
+  int iValue = 0;
+  int iRet = 0;
 
-    printf("Enter Number: ");
-    scanf("%d",&iValue);
+  printf("Enter number: ");
+  scanf("%d", &iValue);
 
-    iRet = Max(iValue);
+  int iRet = Max(iValue);
+  printf("Largest digit is : %d\n", iRet);
 
-    printf("%d", iRet);
-
-    return 0;
+  return 0;
 }
