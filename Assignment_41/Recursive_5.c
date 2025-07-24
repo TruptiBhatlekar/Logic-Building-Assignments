@@ -16,30 +16,24 @@
 
 void Display(int iNo)
 {
-    int iCnt = 0;
-    char ch = 'a';
+  static char ch = 'a';
 
-    if((iNo < 1 || iNo > 26))
-    {
-        printf("Wrong input");
-        return;
-    }
-        
-    for (iCnt = 0; iCnt < iNo; iCnt++)
-    {
-        printf("%c ",ch);
-        ch++; 
-    }
+  if (iNo > 0)
+  {
+    printf("%c\t", ch);
+    ch++;
+    Display(iNo - 1);
+  }
 }
 
 int main()
 {
-    int iValue = 0;
+  int iValue = 0;
 
-    printf("Enter number: ");
-    scanf("%d", &iValue);
+  printf("Enter number: ");
+  scanf("%d", &iValue);
 
-    Display(iValue);
+  Display(iValue);
 
-    return 0;
+  return 0;
 }
