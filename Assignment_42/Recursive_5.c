@@ -16,34 +16,24 @@
 
 int Mult(int iNo)
 {
-    int iMult = 1; int iDigit = 0;
-        
-    if(iNo == 0)
-    {
-        iNo = -iNo;
-    }
+  if (iNo == 0)
+  {
+    return 1;
+  }
 
-    while(iNo != 0)
-    {
-        iDigit = iNo % 10;
-
-        iMult *= iDigit;
-
-        iNo /= 10;
-    }
-    return iMult;
+  return (iNo % 10) * Mult(iNo / 10);
 }
 
 int main()
 {
-    int iValue = 0; int iRet = 0;
+  int iValue = 0, iRet = 0;
 
-    printf("Enter number: ");
-    scanf("%d", &iValue);
+  printf("Enter number: ");
+  scanf("%d", &iValue);
 
-    iRet = Mult(iValue);
+  iRet = Mult(iValue);
 
-    printf("%d", iRet);
+  printf("Multiplication is : %d\n", iRet);
 
-    return 0;
+  return 0;
 }
