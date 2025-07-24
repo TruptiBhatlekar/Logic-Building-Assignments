@@ -16,36 +16,32 @@
 
 int Min(int iNo)
 {
-    int iDigit = 0; int iMin = 9;
+  static int iMin = 9;
+  int iDigit = 0;
 
-    if(iNo < 0) 
+  if (iNo != 0)
+  {
+    iDigit = iNo % 10;
+    if (iDigit < iMin)
     {
-        iNo = -iNo;
+      iMin = iDigit;
     }
+    Min(iNo / 10);
+  }
 
-    while(iNo != 0)
-    {
-        iDigit = iNo % 10;
-        
-        if(iDigit < iMin)
-        {
-            iMin = iDigit;
-        }
-        iNo = iNo / 10;
-    }
-    return iMin;
+  return iMin;
 }
 
 int main()
 {
-    int iValue = 0; int iRet = 0;
+  int iValue = 0;
+  int iRet = 0;
 
-    printf("Enter number: ");
-    scanf("%d", &iValue);
+  printf("Enter number: ");
+  scanf("%d", &iValue);
 
-    iRet = Min(iValue);
+  int iRet = Min(iValue);
+  printf("Smallest digit is : %d\n", iRet);
 
-    printf("%d", iRet);
-
-    return 0;
+  return 0;
 }
