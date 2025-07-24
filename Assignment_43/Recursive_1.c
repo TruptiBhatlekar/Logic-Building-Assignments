@@ -12,34 +12,34 @@
 // Output: 3
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
+#include <stdio.h>
 
 int WhiteSpace(char *str)
 {
-    int iCnt = 0;
+  static int iCnt = 0;
 
-    while (*str != '\0')
-    {
+  if (*str != '\0')
+  {
     if (*str == ' ')
     {
       iCnt++;
     }
-    str++;
+    WhiteSpace(str + 1);
   }
+
   return iCnt;
 }
 
 int main()
 {
-    char arr[100];
-    int iRet = 0;
+  char Arr[50];
+  int iRet = 0;
 
-    printf("Enter string: ");
-    scanf("%[^\n]s", arr);
+  printf("Enter string: ");
+  scanf(" %[^\n]s", Arr);
 
-    iRet = WhiteSpace(arr);
+  int iRet = WhiteSpace(Arr);
+  printf("White spaces are : %d\n", iRet);
 
-    printf("%d\n", iRet);
-
-    return 0;
+  return 0;
 }
