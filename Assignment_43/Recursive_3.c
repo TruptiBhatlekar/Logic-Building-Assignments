@@ -12,34 +12,34 @@
 // Output: 5 
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
+#include <stdio.h>
 
 int Small(char *str)
 {
-    int iCnt = 0;
+  static int iCnt = 0;
 
-    while (*str != '\0')
-    {
+  if (*str != '\0')
+  {
     if ((*str >= 'a') && (*str <= 'z'))
     {
-        iCnt++;
+      iCnt++;
     }
-        str++;
-    }
-    return iCnt;
+    Small(str + 1);
+  }
+
+  return iCnt;
 }
 
 int main()
 {
-    int iRet = 0;
-    char arr[20];
+  char Arr[50];
+  int iRet = 0;
 
-    printf("Enter String: ");
-    scanf("%[^'\n']s",arr);
+  printf("Enter string: ");
+  scanf(" %[^\n]s", Arr);
 
-    iRet = Small(arr);
+  int iRet = Small(Arr);
+  printf("Number of small letters are : %d\n", iRet);
 
-    printf("%d", iRet);
-
-    return 0;
+  return 0;
 }
