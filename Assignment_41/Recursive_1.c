@@ -12,26 +12,25 @@
 // Output: * * * * * 
 ///////////////////////////////////////////////////////
 
-#include<stdio.h>
+#include <stdio.h>
 
 void Display(int iNo)
 {
-    int iCnt = 0; 
-
-    for(iCnt = 1; iCnt <= iNo; iCnt++)
-    {
-        printf(" * ");
-    }
+  if (iNo > 0)
+  {
+    printf("*\t");
+    Display(iNo - 1);
+  }
 }
 
 int main()
 {
-    int iValue = 0;
+  int iValue = 0;
 
-    printf("Enter Number: ");
-    scanf("%d",&iValue);
+  printf("Enter number: ");
+  scanf("%d", &iValue);
 
-    Display(iValue);
+  Display(iValue);
 
-    return 0;
+  return 0;
 }
